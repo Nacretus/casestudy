@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(60deg, #29323c 0%, #585563 100%);
+}
+.container{
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.container .header{
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+}
+.container .form{
+    margin-top: 30px;
+}
+.form .input_box{
+    width: 100%;
+    margin-top: 20px;
+}
+.input_box label{
+    color: #333;
+}
+.form :where( .input_box input, .select_box){
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 8px;
+    outline: none;
+    font-size: 1rem;
+    color: #707070;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+}
+.input_box:focus{
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.form .column{
+    display: flex;
+    column-gap: 15px;
+}
+.form .gender_box{
+    margin-top: 20px;
+}
+.gender_box h3{
+    color: #333;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+.form :where( .gender_option, .gender){
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+}
+.form .gender{
+    column-gap: 5px;  
+}
+.form .gender input{
+    accent-color: #2082F7;
+}
+.form :where(.gender input, .gender label){
+    cursor: pointer;
+}
+.gender label{
+    color: #707070;
+}
+select{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: #707070;
+    font-size: 1rem;
+}
+.form button{
+    color: #2082F7;
+    background-color: transparent;
+    border: 1px solid #2082F7;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+    height: 55px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: 400px;
+}
+.form button:hover{
+    color: white;
+    background-color: #2082F7;
+}
+.adress :where(input, .select_box){
+    margin-top: 15px;
+}
+@media screen and (max-width:500px){
+    .form .column{
+        flex-wrap: wrap;
+    }
+}
